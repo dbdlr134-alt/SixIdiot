@@ -1,0 +1,129 @@
+/* * style.css 
+ * 전체 공통 스타일시트
+ */
+
+/* 기본 스타일 초기화 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ----------------------------------
+ * header.jsp (상단 고정 헤더)
+ * ---------------------------------- */
+header {
+    /* 화면 상단에 고정 [사용자 요청] */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    /* 스타일 */
+    background-color: white;
+    padding: 20px 40px;
+    border-bottom: 1px solid #ddd;
+    
+    /* 다른 요소들 위에 표시되도록 z-index 설정 */
+    z-index: 1000; 
+
+    /* 내부 요소 (h1, nav) 정렬 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.5em;
+    color: #005a9c; /* 포인트 컬러 */
+}
+
+/* 네비게이션 메뉴 */
+header nav ul {
+    display: flex;
+}
+
+header nav li {
+    margin-left: 30px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+header nav li:hover {
+    color: #007bff;
+}
+
+
+/* ----------------------------------
+ * section (공통 메인 컨텐츠 영역)
+ * ---------------------------------- */
+section {
+    /* * [중요] 상단 고정 헤더(header)의 높이만큼 
+     * 컨텐츠 영역에 상단 패딩을 주어 가려지지 않게 함 
+     */
+    padding-top: 100px; /* header 높이(패딩 포함)보다 여유 있게 설정 */
+    
+    /* 페이지 기본 여백 */
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 60px; /* footer와의 여유 공간 */
+
+    /* 최소 높이를 주어 푸터가 바로 따라붙지 않게 함 */
+    min-height: 80vh; 
+}
+
+
+/* ----------------------------------
+ * index.jsp 전용 스타일
+ * ---------------------------------- */
+.index-content {
+    text-align: center;
+    padding-top: 80px;
+}
+
+.index-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.index-content h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.index-content p {
+    font-size: 1.1em;
+    color: #555;
+    max-width: 700px; /* 가독성을 위해 최대 너비 설정 */
+    margin: 10px auto;
+}
+
+
+/* ----------------------------------
+ * footer.jsp (하단 푸터)
+ * ---------------------------------- */
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #f8f8f8;
+    border-top: 1px solid #eee;
+    color: #777;
+    font-size: 0.9em;
+}
