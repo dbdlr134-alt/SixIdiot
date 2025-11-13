@@ -1,0 +1,204 @@
+/* /css/style.css */
+
+/* 기본 여백 제거 및 글꼴 설정 */
+body {
+    font-family: 'Malgun Gothic', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* 헤더 스타일 */
+header {
+    background-color: #004a99;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+/* 네비게이션 메뉴 스타일 (상단 고정) */
+nav {
+    position: sticky; /* 스크롤 시 상단에 고정 */
+    top: 0;           /* 화면 상단에 붙임 */
+    z-index: 1000;    /* 다른 요소들 위에 표시 */
+    
+    background-color: #333;
+    overflow: hidden;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+nav li {
+    float: left;
+}
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav li a:hover {
+    background-color: #111;
+}
+
+/* 메인 컨텐츠 영역 스타일 */
+section {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    min-height: 400px;
+}
+
+/* 푸터 스타일 */
+footer {
+    background-color: #222;
+    color: #aaa;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+/* 폼 테이블 스타일 */
+.form-table {
+    width: 60%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+.form-table th, .form-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+.form-table th {
+    width: 30%;
+    background-color: #f9f9f9;
+    text-align: center;
+    font-weight: bold;
+}
+.form-table td {
+    width: 70%;
+    text-align: left;
+}
+
+/* 입력 필드 (input, select) 스타일 */
+.form-table input[type="text"],
+.form-table input[type="number"],
+.form-table select {
+    width: 95%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* 버튼 영역 스타일 */
+.btn-group {
+    text-align: center;
+    margin-top: 20px;
+}
+.btn-group button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn-submit {
+    background-color: #004a99; /* 파란색 */
+}
+.btn-submit:hover {
+    background-color: #003366;
+}
+.btn-reset {
+    background-color: #666; /* 회색 */
+}
+.btn-reset:hover {
+    background-color: #444;
+}
+
+.data-table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    text-align: center; /* 모든 항목 가운데 정렬 */
+}
+.data-table th, .data-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+.data-table th {
+    background-color: #f2f2f2; /* 헤더 배경색 */
+    color: #333;
+    font-weight: bold;
+}
+.data-table tr:nth-child(even) {
+    background-color: #f9f9f9; /* 짝수 행 배경색 */
+}
+.data-table tr:hover {
+    background-color: #f1f1f1; /* 마우스 오버 */
+}
+.rank-badge {
+    display: inline-block;
+    width: 45px; /* 원의 너비 */
+    height: 45px; /* 원의 높이 */
+    line-height: 45px; /* 텍스트를 원의 세로 중앙에 위치 */
+    border-radius: 50%; /* 원형으로 만들기 */
+    font-weight: bold;
+    font-size: 1.1em;
+    color: white; /* 기본 글자색 */
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15); /* 입체감 */
+}
+
+/* 1등: 금메달 */
+.rank-gold {
+    background: linear-gradient(145deg, #fce588, #e7c000); /* 빛나는 금색 */
+    color: #333; /* 금색 배경에는 어두운 글씨 */
+}
+
+/* 2등: 은메달 */
+.rank-silver {
+    background: linear-gradient(145deg, #e0e0e0, #a9a9a9); /* 은색 */
+    color: #333; /* 은색 배경에도 어두운 글씨 */
+}
+
+/* 3등: 동메달 */
+.rank-bronze {
+    background: linear-gradient(145deg, #d9a784, #b07144); /* 동색 */
+    color: white;
+}
+
+/* 4등 이하 */
+.rank-other {
+    background-color: #6c757d; /* 차분한 회색 */
+    color: white;
+    font-size: 1em; /* 메달보다 약간 작게 */
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+}
+
+/* 랭킹 테이블의 '등수' 컬럼 너비 조정 */
+.data-table .col-rank {
+    width: 100px; /* 등수 배지가 들어갈 공간 확보 */
+    vertical-align: middle; /* 세로 중앙 정렬 */
+}
