@@ -1,0 +1,305 @@
+/* 기본 스타일 */
+body {
+    font-family: Arial, "돋움", sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* header, main, footer를 수직 정렬 */
+    min-height: 100vh; /* 최소 높이를 화면 전체로 설정 */
+    background-color: #f9f9f9;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 2. Header (header.jsp) */
+header {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+header nav {
+    margin-top: 15px;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+header nav a {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+header nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* 2. Main Content (index.jsp) */
+main {
+    flex: 1; /* main 영역이 남은 공간을 모두 차지 */
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto; /* 상하 30px, 좌우 auto */
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.main-content {
+    text-align: center;
+    line-height: 1.8;
+}
+
+.main-content h2 {
+    color: #333;
+    font-size: 24px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.main-content h3 {
+    color: #007bff;
+    font-size: 18px;
+    margin-top: 30px;
+}
+
+.main-content p {
+    color: #555;
+    font-size: 16px;
+}
+
+/* 3. Footer (footer.jsp) */
+footer {
+    width: 100%;
+    background-color: #343a40;
+    color: #aaa;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto; /* main이 짧아도 항상 하단에 고정 */
+    font-size: 12px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* --- reservation.jsp 폼 스타일 (추가) --- */
+.form-container {
+    width: 100%;
+    max-width: 600px; /* 폼 최대 넓이 */
+    margin: 0 auto; /* main 중앙 정렬 */
+    padding: 20px;
+}
+
+main h2 {
+    text-align: center;
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-table {
+    width: 100%;
+    border-collapse: collapse; /* 테이블 선 합치기 */
+    border-top: 2px solid #007bff;
+}
+
+.form-table th,
+.form-table td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.form-table th {
+    width: 30%; /* 제목 칸 넓이 */
+    text-align: left;
+    background-color: #f9f9f9;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-table td {
+    width: 70%;
+}
+
+.form-table input[type="text"] {
+    width: 90%;
+    max-width: 250px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+.form-table input[type="text"]::placeholder {
+    color: #aaa;
+}
+
+/* 버튼 영역 */
+.form-buttons {
+    text-align: center;
+    border-bottom: 2px solid #007bff; /* 하단 선 */
+}
+
+.form-buttons button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    margin: 10px 5px;
+    transition: background-color 0.3s;
+}
+
+/* 등록 버튼 */
+.form-buttons button[type="button"] {
+    background-color: #007bff;
+    color: white;
+}
+
+.form-buttons button[type="button"]:hover {
+    background-color: #0056b3;
+}
+
+/* 다시쓰기 버튼 */
+.form-buttons button[type="button"]:last-child {
+    background-color: #6c757d;
+    color: white;
+}
+
+.form-buttons button[type="button"]:last-child:hover {
+    background-color: #5a6268;
+}
+
+/* --- search.jsp 폼 스타일 (추가) --- */
+/* (reservation.jsp와 겹치는 .form-table, .form-buttons 스타일은 생략) */
+
+.search-form th {
+    width: 20%; /* 검색폼은 제목 칸을 좀 더 좁게 */
+}
+.search-form td {
+    width: 80%;
+}
+.search-form input[type="text"] {
+    width: 70%;
+    max-width: 400px;
+}
+.search-form .form-buttons button {
+    background-color: #28a745; /* 조회 버튼은 녹색 계열 */
+}
+.search-form .form-buttons button:hover {
+    background-color: #218838;
+}
+
+
+/* --- result.jsp 결과 테이블 스타일 (추가) --- */
+.result-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-top: 2px solid #007bff;
+    font-size: 14px;
+}
+
+.result-table th,
+.result-table td {
+    border: 1px solid #ddd;
+    padding: 10px 12px;
+    text-align: left;
+    line-height: 1.6;
+}
+
+.result-table th {
+    background-color: #f9f9f9;
+    font-weight: bold;
+    width: 12%; /* 제목 셀 너비 고정 */
+}
+
+.result-table td {
+    background-color: #fff;
+    width: 21.33%; /* 데이터 셀 너비 */
+}
+
+/* 백신종류처럼 넓게 합쳐진 셀을 위한 스타일 */
+.result-table td[colspan="5"] {
+    width: auto;
+}
+
+/* 조회 실패 시 메시지 스타일 */
+main h2 {
+    text-align: center;
+    color: #333;
+}
+main p {
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+}
+
+/* --- statistics.jsp 통계 테이블 스타일 (추가) --- */
+.stat-table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border-top: 2px solid #007bff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.stat-table th,
+.stat-table td {
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    text-align: center;
+}
+
+.stat-table thead th {
+    background-color: #f9f9f9;
+    font-weight: bold;
+    color: #333;
+    border-bottom: 2px solid #ddd;
+}
+
+.stat-table tbody tr:nth-child(even) {
+    background-color: #fdfdfd;
+}
+
+/* 총누계 행 스타일 */
+.stat-table .total-row {
+    background-color: #e9ecef; /* 약간 어두운 배경 */
+    font-weight: bold;
+    color: #000;
+}
+
+.stat-table .total-row td {
+    text-align: right; /* 첫 번째 셀(총누계 텍스트)을 오른쪽 정렬 */
+    padding-right: 30px;
+}
+.stat-table .total-row td:last-child {
+    text-align: center; /* 마지막 셀(건수)은 다시 중앙 정렬 */
+}
